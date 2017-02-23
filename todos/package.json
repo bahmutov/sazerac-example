@@ -6,7 +6,7 @@
     "react-addons-test-utils": "^15.3.0",
     "react-scripts": "^0.6.0",
     "sazerac": "^0.2.2",
-    "snap-shot": "2.14.0"
+    "snap-shot": "2.16.0"
   },
   "dependencies": {
     "react": "^15.3.0",

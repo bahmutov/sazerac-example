@@ -1,0 +1,121 @@
+exports['updates todos based on actions 1'] = {
+  "name": "todos",
+  "behavior": [
+    {
+      "given": [
+        null,
+        {}
+      ],
+      "expect": []
+    },
+    {
+      "given": [
+        [],
+        {
+          "type": "ADD_TODO",
+          "text": "Run the tests",
+          "id": 0
+        }
+      ],
+      "expect": [
+        {
+          "id": 0,
+          "text": "Run the tests",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "given": [
+        [
+          {
+            "text": "Run the tests",
+            "completed": false,
+            "id": 0
+          }
+        ],
+        {
+          "type": "ADD_TODO",
+          "text": "Use Redux",
+          "id": 1
+        }
+      ],
+      "expect": [
+        {
+          "text": "Run the tests",
+          "completed": false,
+          "id": 0
+        },
+        {
+          "id": 1,
+          "text": "Use Redux",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "given": [
+        [
+          {
+            "text": "Run the tests",
+            "completed": false,
+            "id": 0
+          },
+          {
+            "type": "ADD_TODO",
+            "text": "Use Redux",
+            "id": 1
+          }
+        ],
+        {
+          "type": "TOGGLE_TODO",
+          "id": 1
+        }
+      ],
+      "expect": [
+        {
+          "text": "Run the tests",
+          "completed": false,
+          "id": 0
+        },
+        {
+          "type": "ADD_TODO",
+          "text": "Use Redux",
+          "id": 1,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "given": [
+        [
+          {
+            "text": "Study hard",
+            "completed": true,
+            "id": 1
+          }
+        ],
+        {
+          "type": "TOGGLE_TODO",
+          "id": 1
+        }
+      ],
+      "expect": [
+        {
+          "text": "Study hard",
+          "completed": false,
+          "id": 1
+        }
+      ]
+    }
+  ]
+}
+
+exports['sets "id", "test" and "completed" properties 1'] = [
+  {
+    "id": 0,
+    "text": "Run the tests",
+    "completed": false
+  }
+]
+
