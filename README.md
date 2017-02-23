@@ -8,7 +8,7 @@ I have updated the "todos" tests to use [snap-shot](https://github.com/bahmutov/
 See how it tests individual action in
 [todos/src/actions/index.spec.js](todos/src/actions/index.spec.js) and
 reducer [todos/src/reducers/todos.spec.js](todos/src/reducers/todos.spec.js)
-files.
+files. You can see comparison in [https://github.com/mikec/sazerac-example/compare/master...bahmutov:snap-shot?expand=1#diff-12cfe92b8b6a6206494b14656830fd53](https://github.com/mikec/sazerac-example/compare/master...bahmutov:snap-shot?expand=1#diff-12cfe92b8b6a6206494b14656830fd53)
 
 ```js
 // todos.spec.js
